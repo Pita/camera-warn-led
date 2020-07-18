@@ -1,0 +1,22 @@
+{
+  "name": "camera-blinkstick",
+  "version": "0.0.1",
+  "description": "Activates the light of a blinkstick when the mac camera turns on",
+  "main": "index.js",
+  "scripts": {
+    "service:install": "sudo node src/service/install.js",
+    "service:uninstall": "sudo node src/service/uninstall.js",
+    "service:restart": "sudo launchctl kickstart -k system/camerawarnlight",
+    "service:config": "cat /Library/LaunchDaemons/camerawarnlight.plist"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tweenjs/tween.js": "^18.6.0",
+    "blinkstick": "^1.2.0",
+    "lodash": "^4.17.19",
+    "node-mac": "^1.0.1",
+    "tail": "^2.0.4",
+    "usb-detection": "^4.9.0"
+  }
+}
